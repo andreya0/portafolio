@@ -14,12 +14,11 @@ i18n
     supportedLngs: ["en", "es"],
     fallbackLng: "es",
     detection: {
-      order: ["htmlTag", "localStorage", "querystring", "cookie", "navigator"],
-      caches: ["cookie"],
+      order: ["localStorage", "querystring", "navigator"],
+      caches: ["localstorage"],
     },
     backend: { loadPath: "/assets/locals/{{lng}}/translation.json" },
   });
 
-// append app to dom
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);
