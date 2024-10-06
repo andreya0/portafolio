@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import "./App.css";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 function App() {
   const { t } = useTranslation();
 
-  return <h2>{t("welcome_to_react")}</h2>;
+  return <LanguageSwitcher></LanguageSwitcher>;
 }
 
 export default App;
