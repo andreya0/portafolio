@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <select className="" value={language} onChange={handleChange}>
+    <select value={language} onChange={handleChange}>
       <option value="es">ES</option>
       <option value="en">EN</option>
     </select>
