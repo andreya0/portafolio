@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import i18n from "i18next";
+import { Globe } from "lucide-react";
 
 export default function LanguageSwitcher() {
   const [language, setLanguage] = useState(() => {
@@ -24,9 +25,20 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <select value={language} onChange={handleChange}>
-      <option value="es">ES</option>
-      <option value="en">EN</option>
-    </select>
+    <div className="flex items-center bg-black bg-opacity-30 rounded-full px-3 py-1">
+      <Globe className="text-white w-4 h-4 mr-2" />
+      <select
+        value={language}
+        onChange={handleChange}
+        className="bg-transparent text-white text-sm focus:outline-none"
+      >
+        <option value="es" className="text-black">
+          ES
+        </option>
+        <option value="en" className="text-black">
+          EN
+        </option>
+      </select>
+    </div>
   );
 }

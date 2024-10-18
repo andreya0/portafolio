@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "flag-icon-css": "^4.1.7",
+    "framer-motion": "^11.11.9",
     "i18next": "^23.15.2",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.6.2",
+    "lucide-react": "^0.453.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.2"
@@ -30,7 +32,7 @@
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
+    "tailwindcss": "^3.4.14",
     "vite": "^5.4.8"
   }
 }
