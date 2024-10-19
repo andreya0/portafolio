@@ -8,19 +8,23 @@ export default function Portfolio() {
   const { t } = useTranslation();
 
   return (
-    <div
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-cover bg-center bg-black"
-      style={{
-        backgroundImage: "url('/placeholder.svg?height=1080&width=1920')",
-      }}
-    >
-      <div className="absolute top-4 right-4 z-10">
-        <LanguageSwitcher />
-      </div>
+    <div className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-cover bg-black">
+      <motion.div
+        className="absolute inset-0"
+        initial={{ opacity: 0, filter: "blur(50px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ delay: 2.4, duration: 1 }}
+        style={{
+          backgroundImage:
+            "url('/img/background-img.jpg?height=1080&width=1920')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <div className="flex flex-col justify-center items-center">
         <div className="relative w-full h-[500px] flex flex-col justify-center items-center">
-          <div className="relative w-4/5 md:w-4/5 lg:w-4/5 flex flex-col items-center">
-            {/* Upper Line */}
+          <div className="relative w-4/5 md:w-4/5 lg:w-4/5 flex flex-col items-center ">
+            {/* Linea arriba */}
             <motion.div
               className="absolute w-full h-1 bg-white"
               style={{ top: "50%" }}
@@ -28,7 +32,7 @@ export default function Portfolio() {
               animate={{ top: "0%" }}
               transition={{ duration: 1.5, delay: 0.5 }}
             />
-            {/* Lower Line */}
+            {/* Linea abajo */}
             <motion.div
               className="absolute w-full h-1 bg-white"
               style={{ bottom: "50%" }}
@@ -36,7 +40,7 @@ export default function Portfolio() {
               animate={{ bottom: "0%" }}
               transition={{ duration: 1.5, delay: 0.5 }}
             />
-            {/* Left Top Line */}
+            {/* Linea arriba izq */}
             <motion.div
               className="absolute w-1 bg-white left-0"
               style={{
@@ -48,7 +52,7 @@ export default function Portfolio() {
               animate={{ scaleY: 2.5, opacity: 1 }}
               transition={{ duration: 1, delay: 1.7 }}
             />
-            {/* Right Top Line */}
+            {/* Linea arriba derecha */}
             <motion.div
               className="absolute w-1 bg-white right-0"
               style={{
@@ -60,7 +64,7 @@ export default function Portfolio() {
               animate={{ scaleY: 2.5, opacity: 1 }}
               transition={{ duration: 1, delay: 1.7 }}
             />
-            {/* Bottom Left Line */}
+            {/* Linea abajo izq */}
             <motion.div
               className="absolute w-1 bg-white left-0"
               style={{
@@ -72,7 +76,7 @@ export default function Portfolio() {
               animate={{ scaleY: 2.5, opacity: 1 }}
               transition={{ duration: 1, delay: 1.7 }}
             />
-            {/* Bottom Right Line */}
+            {/* Linea abajo derecha */}
             <motion.div
               className="absolute w-1 bg-white right-0"
               style={{
@@ -84,7 +88,7 @@ export default function Portfolio() {
               animate={{ scaleY: 2.5, opacity: 1 }}
               transition={{ duration: 1, delay: 1.7 }}
             />
-            {/* Middle Line */}
+            {/* Linea del medio */}
             <motion.div
               className="absolute w-1 bg-white right-0"
               style={{
@@ -98,32 +102,30 @@ export default function Portfolio() {
               transition={{ duration: 1, delay: 1.7 }}
             />
 
-            {/* Profile Image */}
+            {/* Imagen */}
             <motion.div
-              className="absolute z-10 mb-8"
+              className="absolute z-10 mb-8 rounded-full w-32 h-32 mx-auto border-2 border-white"
               initial={{ y: -45 }}
               animate={{ y: -150 }}
               transition={{ duration: 1.5, delay: 0.5 }}
             >
               <motion.img
-                src="/placeholder.svg?height=150&width=150"
-                alt="Profile image of [Your Name]"
-                className="rounded-full w-32 h-32 mx-auto border-2 border-white"
-                initial={{}}
-                animate={{}}
+                src="/img/profile.jpg"
+                alt="Andrey_Arroyo_Gomez_img"
+                className="rounded-full w-full h-full mx-auto object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                  delay: 1.5,
+                  delay: 2.5,
+                  duration: 1.5,
                 }}
               />
             </motion.div>
-            {/* Name and Title */}
-            <div className="flex flex-col items-center z-10 p-9">
-              <div className="flex flex-wrap justify-center max-w-full">
+            {/* Nombre y titulo */}
+            <div className="flex flex-col items-center z-10 m-9 bg-gray-800 bg-opacity-10 rounded">
+              <div className="flex flex-wrap justify-center max-w-full ">
                 {name.split(" ").map((word, wordIndex) => (
-                  <div key={`word-${wordIndex}`} className="flex mx-3">
+                  <div key={`word-${wordIndex}`} className="flex mx-3 ">
                     {word.split("").map((char, charIndex) => (
                       <svg
                         key={`char-${wordIndex}-${charIndex}`}
@@ -150,10 +152,10 @@ export default function Portfolio() {
                   duration: 0.6,
                   delay: 2.3,
                   type: "spring",
-                  stiffness: 200,
+                  stiffness: 100,
                 }}
               >
-                Guapo :v
+                {t("title")}
               </motion.p>
             </div>
           </div>

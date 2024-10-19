@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center bg-black bg-opacity-30 rounded-full px-3 py-1">
+    <div className="flex items-center bg-gray-500 bg-opacity-25 rounded-full px-3 py-1">
       <Globe className="text-white w-4 h-4 mr-2" />
       <select
         value={language}
