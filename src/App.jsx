@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./index.css";
-import Portfolio from "./components/Portfolio";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import Portfolio from "./components/portfolio";
 
 function App() {
   return (

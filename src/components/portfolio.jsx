@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
 import LetterPath from "./LetterPath";
-
+import GitHubIcon from "../../public/icons/github";
+import LinkedInIcon from "../../public/icons/linkedln";
 export default function Portfolio() {
   const name = "Andrey Arroyo Gómez";
   const { t } = useTranslation();
@@ -13,24 +13,25 @@ export default function Portfolio() {
         className="absolute inset-0"
         initial={{ opacity: 0, filter: "blur(50px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
-        transition={{ delay: 2.4, duration: 1 }}
+        transition={{ delay: 1.1, duration: 0.5 }}
         style={{
-          backgroundImage:
-            "url('/img/background-img.jpg?height=1080&width=1920')",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
+                      url('/img/background-img.jpg?height=1080&width=1920')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
+
       <div className="flex flex-col justify-center items-center">
         <div className="relative w-full h-[500px] flex flex-col justify-center items-center">
-          <div className="relative w-4/5 md:w-4/5 lg:w-4/5 flex flex-col items-center ">
+          <div className="relative w-4/5 max-w-[1200px] min-w-[300px] flex flex-col items-center ">
             {/* Linea arriba */}
             <motion.div
               className="absolute w-full h-1 bg-white"
               style={{ top: "50%" }}
               initial={{ top: "50%" }}
               animate={{ top: "0%" }}
-              transition={{ duration: 1.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             />
             {/* Linea abajo */}
             <motion.div
@@ -38,7 +39,7 @@ export default function Portfolio() {
               style={{ bottom: "50%" }}
               initial={{ bottom: "50%" }}
               animate={{ bottom: "0%" }}
-              transition={{ duration: 1.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             />
             {/* Linea arriba izq */}
             <motion.div
@@ -50,7 +51,7 @@ export default function Portfolio() {
               }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 2.5, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.7 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
             />
             {/* Linea arriba derecha */}
             <motion.div
@@ -62,7 +63,7 @@ export default function Portfolio() {
               }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 2.5, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.7 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
             />
             {/* Linea abajo izq */}
             <motion.div
@@ -74,7 +75,7 @@ export default function Portfolio() {
               }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 2.5, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.7 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
             />
             {/* Linea abajo derecha */}
             <motion.div
@@ -86,7 +87,7 @@ export default function Portfolio() {
               }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 2.5, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.7 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
             />
             {/* Linea del medio */}
             <motion.div
@@ -99,7 +100,7 @@ export default function Portfolio() {
               }}
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 2.5, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.7 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
             />
 
             {/* Imagen */}
@@ -107,7 +108,7 @@ export default function Portfolio() {
               className="absolute z-10 mb-8 rounded-full w-32 h-32 mx-auto border-2 border-white"
               initial={{ y: -45 }}
               animate={{ y: -150 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <motion.img
                 src="/img/profile.jpg"
@@ -116,13 +117,16 @@ export default function Portfolio() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
-                  delay: 2.5,
+                  delay: 1.3,
                   duration: 1.5,
                 }}
               />
             </motion.div>
             {/* Nombre y titulo */}
-            <div className="flex flex-col items-center z-10 m-9 bg-gray-800 bg-opacity-10 rounded">
+            <motion.div
+              className="flex flex-col items-center z-10 m-9 rounded"
+              transition={{ duration: 0.6, delay: 2 }}
+            >
               <div className="flex flex-wrap justify-center max-w-full ">
                 {name.split(" ").map((word, wordIndex) => (
                   <div key={`word-${wordIndex}`} className="flex mx-3 ">
@@ -150,17 +154,54 @@ export default function Portfolio() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   duration: 0.6,
-                  delay: 2.3,
+                  delay: 1.2,
                   type: "spring",
                   stiffness: 100,
                 }}
               >
                 {t("title")}
               </motion.p>
-            </div>
+            </motion.div>
           </div>
+          {/* Botones */}
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: 25 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
+          >
+            <button className="px-6 py-2 text-white border-[1px]">
+              Sobre mi
+            </button>
+            <button className="px-6 text-white border-[1px]">Sobre mi</button>
+            <button className="px-6 text-white border-[1px]">Sobre mi</button>
+          </motion.div>
         </div>
       </div>
+      {/* LinkedIn and GitHub buttons */}
+      <motion.div
+        className="flex justify-center space-x-4 z-10"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 100 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
+      >
+        <button
+          className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/andreyarroyo/", "_blank")
+          }
+          aria-label="LinkedIn Profile"
+        >
+          <LinkedInIcon className="h-8 w-8 " />
+        </button>
+        <button
+          className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"
+          onClick={() => window.open("https://github.com/andreya0", "_blank")}
+          aria-label="GitHub Profile"
+        >
+          <GitHubIcon className="h-8 w-8" />
+        </button>
+      </motion.div>
     </div>
   );
 }

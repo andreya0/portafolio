@@ -7,8 +7,8 @@ const letterPaths = {
   R: "M5 20V5H10Q15 5 15 10T10 15H5M10 15L15 20",
   E: "M5 20V5H15M5 12.5H12M5 20H15",
   Y: "M5 5L10 12.5V20M15 5L10 12.5",
-  O: "M10 5Q15 5 15 12.5T10 20Q5 20 5 12.5T10 5",
-  Ó: "M10 5Q15 5 15 12.5T10 20Q5 20 5 12.5T10 5M10 2L12 0",
+  O: "M10 5C13.5 5 16 8 16 12.5C16 17 13.5 20 10 20C6.5 20 4 17 4 12.5C4 8 6.5 5 10 5",
+  Ó: "M10 5C13.5 5 16 8 16 12.5C16 17 13.5 20 10 20C6.5 20 4 17 4 12.5C4 8 6.5 5 10 5M10 2L12 0",
   G: "M15 5H5V20H15V12.5H10",
   M: "M5 20V5L10 15L15 5V20",
   Z: "M5 5H15L5 20H15",
@@ -22,8 +22,8 @@ const LetterPath = ({ char }) => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay: 2, type: "spring", duration: 2.2, bounce: 0 },
-        opacity: { delay: 2, duration: 0.01 },
+        pathLength: { delay: 1.2, type: "spring", duration: 3, bounce: 0 },
+        opacity: { delay: 1.2, duration: 0.1 },
       },
     },
   };
