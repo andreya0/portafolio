@@ -196,8 +196,8 @@ export default function MainPage() {
         {/* Socials */}
         <motion.div
           className="flex justify-center space-x-4 z-10"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 100 }}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
           <button
