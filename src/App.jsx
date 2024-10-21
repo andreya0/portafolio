@@ -1,15 +1,25 @@
-import { useTranslation } from "react-i18next";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
-import Portfolio from "./components/portfolio";
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
+import WorkPage from "./pages/WorkPage";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname == "/";
   return (
     <>
-      <div className="absolute top-4 right-4 z-10">
-        <LanguageSwitcher />
-      </div>
-      <Portfolio />
+      {isHomePage ? <LanguageSwitcher /> : <Navbar />}
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/work" element={<WorkPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </>
   );
 }

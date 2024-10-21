@@ -22,8 +22,8 @@ const LetterPath = ({ char }) => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay: 1.2, type: "spring", duration: 3, bounce: 0 },
-        opacity: { delay: 1.2, duration: 0.1 },
+        pathLength: { delay: 0.6, type: "spring", duration: 3, bounce: 0 },
+        opacity: { delay: 0.6, duration: 0.1 },
       },
     },
   };

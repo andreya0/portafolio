@@ -1,3 +1,9 @@
 {
-    "title": "Software Developer"
+    "title": "Andrey - Portfolio",
+    "position": "Full Stack Developer",
+    "about" : "About me",
+    "cv" : "Download CV",
+    "work": "Experience",
+    "contact": "Contact",
+    "home": "Home"
 }

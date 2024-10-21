@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
 i18n
   .use(initReactI18next)
@@ -21,4 +22,8 @@ i18n
   });
 
 const root = createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
