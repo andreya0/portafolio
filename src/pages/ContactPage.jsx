@@ -1,4 +1,8 @@
 const ContactPage = () => {
-  return <div className="bg-black h-[100vh]"></div>;
+  return (
+    <div className="flex items-center justify-center h-screen bg-black text-white text-4xl">
+      WIP
+    </div>
+  );
 };
 export default ContactPage;
