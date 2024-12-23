@@ -128,8 +128,10 @@ export default function MainPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.img
-                  src="/img/profile.jpg"
+                  src="/img/profile.jpg?w=200&fm=webp"
                   alt="Andrey_Arroyo_Gomez_img"
+                  rel="preload"
+                  loading="lazy"
                   className="rounded-full w-full h-full mx-auto object-cover"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
