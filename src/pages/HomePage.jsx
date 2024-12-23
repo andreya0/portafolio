@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import LetterPath from "../components/LetterPath";
+import LetterPath from "../components/Main/LetterPath";
 import GitHubIcon from "../../public/icons/github";
 import LinkedInIcon from "../../public/icons/linkedln";
-import ButtonMainPage from "../components/ButtonMainPage";
+import ButtonMainPage from "../components/Main/ButtonMainPage";
 import CV from "../../public/icons/cv";
 import { Mail } from "lucide-react";
 export default function MainPage() {

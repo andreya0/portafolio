@@ -1,12 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
-import LanguageSwitcher from "./components/LanguageSwitcher";
+import LanguageSwitcher from "./components/Language/LanguageSwitcher";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import WorkPage from "./pages/WorkPage";
-import Navbar from "./components/Navbar";
+
 import NotFoundPage from "./pages/NotFoundPage";
+import Navbar from "./components/NavBar/Navbar";
 
 function App() {
   const location = useLocation();
