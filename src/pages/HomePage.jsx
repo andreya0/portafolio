@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import LetterPath from "../components/LetterPath";
+import LetterPath from "../components/Main/LetterPath";
 import GitHubIcon from "../../public/icons/github";
 import LinkedInIcon from "../../public/icons/linkedln";
-import ButtonMainPage from "../components/ButtonMainPage";
+import ButtonMainPage from "../components/Main/ButtonMainPage";
 import CV from "../../public/icons/cv";
 import { Mail } from "lucide-react";
 export default function MainPage() {
@@ -27,7 +27,7 @@ export default function MainPage() {
         />
 
         <div className="flex flex-col justify-center items-center">
-          <div className="relative w-full h-[500px] flex flex-col justify-center items-center">
+          <div className="relative w-full h-[500px] min-h-[90vh] flex flex-col justify-center items-center">
             <div className="relative w-4/5 max-w-[1200px] min-w-[300px] flex flex-col items-center ">
               {/* Linea arriba */}
               <motion.div
@@ -122,9 +122,9 @@ export default function MainPage() {
 
               {/* Imagen */}
               <motion.div
-                className="absolute z-10 mb-8 rounded-full w-32 h-32 mx-auto border-2 border-white"
+                className="absolute z-10 mb-8 rounded-full w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-32 xl:h-32 mx-auto border-2 border-white"
                 initial={{ y: -45 }}
-                animate={{ y: -150 }}
+                animate={{ y: "-120%" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.img
@@ -166,7 +166,7 @@ export default function MainPage() {
                   ))}
                 </div>
                 <motion.p
-                  className="text-xl md:text-2xl text-white"
+                  className="text-lg md:text-xl lg:text-2xl text-white"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -182,7 +182,7 @@ export default function MainPage() {
             </div>
             {/* Botones */}
             <motion.div
-              className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-6"
+              className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-7"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, y: 25 }}
               transition={{ delay: 0.8, duration: 0.5 }}
@@ -192,57 +192,62 @@ export default function MainPage() {
               <ButtonMainPage text={t("contact")} to="/contact" />
             </motion.div>
           </div>
-        </div>
-        {/* Socials */}
-        <motion.div
-          className="flex justify-center space-x-4 z-10"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-        >
-          <button
-            className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"
-            onClick={() =>
-              window.open("https://www.linkedin.com/in/andreyarroyo/", "_blank")
-            }
-            aria-label="LinkedIn Profile"
+          {/* Socials */}
+          <motion.div
+            className="flex justify-center space-x-4 z-10"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
           >
-            <LinkedInIcon className="h-8 w-8 " />
-          </button>
-          <button
-            className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"
-            onClick={() => window.open("https://github.com/andreya0", "_blank")}
-            aria-label="GitHub Profile"
-          >
-            <GitHubIcon className="h-8 w-8" />
-          </button>
-          <div className="relative group">
             <button
-              className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200 peer"
+              className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"
               onClick={() =>
-                (window.location.href = "mailto:andreyarroyo02@gmail.com")
+                window.open(
+                  "https://www.linkedin.com/in/andreyarroyo/",
+                  "_blank"
+                )
               }
-              aria-label="Email"
+              aria-label="LinkedIn Profile"
             >
-              <Mail className="h-8 w-8" />
+              <LinkedInIcon className="h-8 w-8 xl:h-9 xl:w-9" />
             </button>
-            <span className="absolute left-1/2 transform -translate-x-1/2 -top-10 w-max p-1 text-sm text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
-              andreyarroyo02@gmail.com
-            </span>
-          </div>
-          <div className="relative group">
             <button
-              className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200 peer"
-              onClick={() => window.open("/path/to/your/cv.pdf", "_blank")}
-              aria-label="Download CV"
+              className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"
+              onClick={() =>
+                window.open("https://github.com/andreya0", "_blank")
+              }
+              aria-label="GitHub Profile"
             >
-              <CV className="h-8 w-8" />
+              <GitHubIcon className="h-8 w-8 xl:h-9 xl:w-9" />
             </button>
-            <span className="absolute left-1/2 transform -translate-x-1/2 -top-10 w-max p-[5px] text-sm text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
-              {t("cv")}
-            </span>
-          </div>
-        </motion.div>
+            <div className="relative group">
+              <button
+                className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200 peer"
+                onClick={() =>
+                  (window.location.href = "mailto:andreyarroyo02@gmail.com")
+                }
+                aria-label="Email"
+              >
+                <Mail className="h-8 w-8 xl:h-9 xl:w-9" />
+              </button>
+              <span className="absolute left-1/2 transform -translate-x-1/2 -top-10 w-max p-1 text-sm text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
+                andreyarroyo02@gmail.com
+              </span>
+            </div>
+            <div className="relative group">
+              <button
+                className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200 peer"
+                onClick={() => window.open("/path/to/your/cv.pdf", "_blank")}
+                aria-label="Download CV"
+              >
+                <CV className="h-8 w-8 xl:h-9 xl:w-9" />
+              </button>
+              <span className="absolute left-1/2 transform -translate-x-1/2 -top-10 w-max p-[5px] text-sm text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
+                {t("cv")}
+              </span>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </AnimatePresence>
   );

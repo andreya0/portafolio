@@ -57,7 +57,7 @@ export default function LanguageSwitcher() {
       hover: "hover:bg-gray-400",
     },
     default: {
-      dropdown: "bg-red-700 bg-opacity-50",
+      dropdown: "bg-gray-800 bg-opacity-50",
       text: "text-white",
       hover: "hover:bg-gray-500",
     },
