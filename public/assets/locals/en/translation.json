@@ -33,5 +33,8 @@
     "send": "Send Message",
     "success": "Message sent successfully!",
     "follow_up": "Thank you for taking the time to write. I'll get back to you as soon as possible."
-  }
+  },
+  "highschool": "Alajuelita Technical Professional High School",
+  "highschool_degree": "Bachelor of Business Informatics",
+  "highschool_description": "During my high school education, I acquired basic knowledge in <strong>programming</strong>, <strong>database administration</strong>, <strong>networks</strong>, <strong>hardware</strong>, and <strong>software</strong>. I participated in <strong>software development</strong> and <strong>system maintenance</strong> projects, strengthening my skills in <strong>problem solving</strong> and <strong>teamwork</strong>. My technical training provided me with a solid foundation to continue my studies in <strong>computer engineering</strong> and develop my career in the field of <strong>technology</strong>."
 }

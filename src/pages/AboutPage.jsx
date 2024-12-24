@@ -25,6 +25,19 @@ export default function AboutPage() {
         { name: "Oracle", iconName: "oracle" },
         { name: "C#", iconName: "csharp" },
         { name: "Bootstrap", iconName: "bootstrap" },
+        { name: "MySQL", iconName: "mysql" },
+        { name: ".NET", iconName: ".net" },
+      ],
+    },
+    {
+      degree: t("highschool_degree"),
+      institution: t("highschool"),
+      year: "2015 - 2020",
+      description: t("highschool_description"),
+      skills: [
+        { name: "Java", iconName: "java" },
+        { name: "C++", iconName: "cplusplus" },
+        { name: "MySQL", iconName: "mysql" },
       ],
     },
   ];

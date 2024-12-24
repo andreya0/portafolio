@@ -47,6 +47,10 @@ export const getSkills = (t) => [
         icon: "docker",
       },
       {
+        name: "Azure DevOps",
+        icon: "azuredevops",
+      },
+      {
         name: "Postman",
         icon: "postman",
       },

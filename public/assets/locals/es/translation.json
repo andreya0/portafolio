@@ -33,5 +33,8 @@
     "send": "Enviar mensaje",
     "success": "¡Mensaje enviado con éxito!",
     "follow_up": "Gracias por tomarte el tiempo para escribir. Me pondré en contacto contigo a la brevedad posible."
-  }
+  },
+  "highschool": "Colegio Técnico Profesional de Alajuelita",
+  "highschool_degree": "Bachillerato en Informática Empresarial",
+  "highschool_description": "Durante mi educación secundaria, adquirí conocimientos básicos en <strong>programación</strong>, <strong>administración de bases de datos</strong>, <strong>redes</strong>, <strong>hardware</strong> y <strong>software</strong>. Participé en proyectos de <strong>desarrollo de software</strong> y <strong>mantenimiento de sistemas</strong>, fortaleciendo mis habilidades en <strong>resolución de problemas</strong> y <strong>trabajo en equipo</strong>. Mi formación técnica me proporcionó una base sólida para continuar mis estudios en <strong>ingeniería informática</strong> y desarrollar mi carrera en el campo de la <strong>tecnología</strong>."
 }
