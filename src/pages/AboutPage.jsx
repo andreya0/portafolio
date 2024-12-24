@@ -31,15 +31,15 @@ export default function AboutPage() {
 
   return (
     <AnimatePresence>
-      <div className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-cover bg-black">
+      <div className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-cover bg-black pt-1">
         <motion.div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-cover bg-center sm:bg-cover lg:bg-contain lg:bg-top"
           initial={{ opacity: 0, filter: "blur(50px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ delay: 0.2, duration: 0.5 }}
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url('https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?auto=format&fit=crop&q=80')`,
+              url('https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?auto=format&fit=crop&q=80')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <AboutSection
                 title={t("background")}
-                content={[t("about_1"), t("about_2")]}
+                content={[t("about_1") || "...", t("about_2") || "...."]}
                 delay={0.4}
                 direction="left"
               />

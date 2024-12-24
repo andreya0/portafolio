@@ -6,6 +6,8 @@ export default function AboutSection({ title, content, delay, direction }) {
       initial={{ opacity: 0, x: direction === "left" ? -20 : 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay, duration: 0.5 }}
+      layout
+      className="transition-opacity duration-500 ease-out"
     >
       <h2 className="text-2xl font-semibold text-white mb-4">{title}</h2>
       {content.map((paragraph, index) => (

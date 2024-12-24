@@ -18,9 +18,20 @@
   "problem_solving": "Resolución de problemas",
   "leadership": "Liderazgo",
   "agile_methodologies": "Metodologías ágiles",
+  "success": "Éxito",
   "backend": "Backend ",
   "frontend": "Frontend ",
   "steve_quote": "La única forma de hacer un gran trabajo es amar lo que haces. - Steve Jobs",
   "about_1": "Soy un desarrollador impulsado por el deseo de comprender el 'por qué' detrás de cada línea de código. Mi pasión radica en resolver problemas del mundo real con tecnología, creando soluciones que se sienten naturales, intuitivas y con propósito.",
-  "about_2": "Aunque me especializo en desarrollo full-stack, me veo a mí mismo como un solucionador de problemas de corazón. Ya sea optimizando experiencias de usuario o construyendo backends robustos, siempre estoy enfocado en crear código limpio, eficiente y significativo que sirva al panorama general."
+  "about_2": "Aunque me especializo en desarrollo full-stack, me veo a mí mismo como un solucionador de problemas de corazón. Ya sea optimizando experiencias de usuario o construyendo backends robustos, siempre estoy enfocado en crear código limpio, eficiente y significativo que sirva al panorama general.",
+  "contact_me": "Contáctame",
+  "contact_info": "Información de contacto",
+  "contact_form": {
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "follow_up": "Gracias por tomarte el tiempo para escribir. Me pondré en contacto contigo a la brevedad posible."
+  }
 }

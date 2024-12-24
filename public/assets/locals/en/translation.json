@@ -18,9 +18,20 @@
   "problem_solving": "Problem Solving",
   "leadership": "Leadership",
   "agile_methodologies": "Agile Methodologies",
+  "success": "Success",
   "backend": "Backend",
   "frontend": "Frontend",
   "steve_quote": "The only way to do great work is to love what you do. - Steve Jobs",
   "about_1": "I’m a developer driven by a desire to understand the 'why' behind every line of code. My passion lies in solving real-world problems with technology, creating solutions that feel natural, intuitive, and purposeful.",
-  "about_2": "While I specialize in full-stack development, I see myself as a problem solver at heart. Whether it's optimizing user experiences or building robust backends, I’m always focused on creating clean, efficient, and meaningful code that serves the bigger picture."
+  "about_2": "While I specialize in full-stack development, I see myself as a problem solver at heart. Whether it's optimizing user experiences or building robust backends, I’m always focused on creating clean, efficient, and meaningful code that serves the bigger picture.",
+  "contact_me": "Get in Touch",
+  "contact_info": "Contact Information",
+  "contact_form": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "follow_up": "Thank you for taking the time to write. I'll get back to you as soon as possible."
+  }
 }

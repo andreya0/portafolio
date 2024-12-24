@@ -55,7 +55,12 @@ export default function Navbar() {
             <ul className="px-4 py-3 space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <NavLink to={item.to}>{item.name}</NavLink>
+                  <NavLink
+                    to={item.to}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    {item.name}
+                  </NavLink>
                 </li>
               ))}
             </ul>

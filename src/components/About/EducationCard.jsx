@@ -8,10 +8,10 @@ export default function EducationCard({ education, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
-      className="bg-white/5 rounded-lg p-6 hover:bg-white/0 transition-colors duration-300"
+      className="bg-black/25 rounded-lg p-6 hover:bg-black/50 transition-colors duration-300"
     >
       <div className="flex items-start gap-4">
-        <div className="p-2 bg-white/10 rounded-lg">
+        <div className="p-2 bg-white/10 rounded-lg hidden sm:block">
           <GraduationCap className="w-6 h-6 text-white" />
         </div>
         <div className="flex-1">
