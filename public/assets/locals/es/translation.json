@@ -34,7 +34,29 @@
     "success": "¡Mensaje enviado con éxito!",
     "follow_up": "Gracias por tomarte el tiempo para escribir. Me pondré en contacto contigo a la brevedad posible."
   },
+  "showmore": "Ver más",
+  "showless": "Ver menos",
   "highschool": "Colegio Técnico Profesional de Alajuelita",
   "highschool_degree": "Bachillerato en Informática Empresarial",
-  "highschool_description": "Durante mi educación secundaria, adquirí conocimientos básicos en <strong>programación</strong>, <strong>administración de bases de datos</strong>, <strong>redes</strong>, <strong>hardware</strong> y <strong>software</strong>. Participé en proyectos de <strong>desarrollo de software</strong> y <strong>mantenimiento de sistemas</strong>, fortaleciendo mis habilidades en <strong>resolución de problemas</strong> y <strong>trabajo en equipo</strong>. Mi formación técnica me proporcionó una base sólida para continuar mis estudios en <strong>ingeniería informática</strong> y desarrollar mi carrera en el campo de la <strong>tecnología</strong>."
+  "highschool_description": "Durante mi educación secundaria, adquirí conocimientos básicos en <strong>programación</strong>, <strong>administración de bases de datos</strong>, <strong>redes</strong>, <strong>hardware</strong> y <strong>software</strong>. Participé en proyectos de <strong>desarrollo de software</strong> y <strong>mantenimiento de sistemas</strong>, fortaleciendo mis habilidades en <strong>resolución de problemas</strong> y <strong>trabajo en equipo</strong>. Mi formación técnica me proporcionó una base sólida para continuar mis estudios en <strong>ingeniería informática</strong> y desarrollar mi carrera en el campo de la <strong>tecnología</strong>.",
+  "work_experience": "Experiencia laboral",
+  "personal_projects": "Proyectos personales",
+  "workexperience": {
+    "simetria": {
+      "position": "Pasante Desarrollador Full Stack",
+      "period": "Sep 2024 - Dic 2024",
+      "description_1": "Desarrollé una <strong>aplicación completa</strong>, desde el <strong>diseño de la base de datos</strong> hasta la <strong>implementación de la interfaz de usuario</strong>, asegurando un producto funcional y eficiente.",
+      "description_2": "Colaboré con un equipo de desarrolladores para <strong>optimizar la arquitectura de la aplicación</strong> y mejorar la <strong>experiencia del usuario</strong> mediante la <strong>metodología ágil</strong>.",
+      "description_3": "Diseñé e implementé <strong>funcionalidades backend y frontend</strong> utilizando <strong>tecnologías modernas</strong> como <strong>.NET Core</strong>, <strong>React</strong> y <strong>MySQL</strong>, asegurando un desarrollo robusto.",
+      "description_4": "Participé en <strong>reuniones de planificación</strong> y <strong>revisión de código</strong> para garantizar la <strong>calidad</strong> y <strong>coherencia</strong> del producto final."
+    }
+  },
+
+  "personalprojects": {
+    "portfolio": {
+      "title": "Sitio web personal",
+      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerias como <strong>React-Router</strong>, <strong>i18React</strong>, con ayuda de <strong>TailwindCSS</strong> para los estilos creando una aplicación web completa con un diseño moderno y funcional."
+    }
+  },
+  "codigo": "Ver código"
 }

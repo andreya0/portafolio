@@ -3,7 +3,8 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import AboutSection from "../components/About/AboutSection";
 import SkillCard from "../components/About/SkillAboutCard";
-import { getSkills } from "../config/skills";
+import { getSkills } from "../data/skills";
+import { getEducation } from "../data/educationdata";
 
 const EducationCard = lazy(() => import("../components/About/EducationCard"));
 
@@ -12,37 +13,7 @@ export default function AboutPage() {
   const containerRef = useRef(null);
   const skills = getSkills(t);
   const isInView = useInView(containerRef, { once: true, amount: 0.1 });
-  const education = [
-    {
-      degree: t("castro_carazo_degree"),
-      institution: t("castro_carazo"),
-      year: "2021 - 2024",
-      description: t("castro_carazo_description"),
-      skills: [
-        { name: "HTML", iconName: "html" },
-        { name: "CSS", iconName: "css" },
-        { name: "JavaScript", iconName: "javascript" },
-        { name: "Java", iconName: "java" },
-        { name: "PHP", iconName: "php" },
-        { name: "Oracle", iconName: "oracle" },
-        { name: "C#", iconName: "csharp" },
-        { name: "Bootstrap", iconName: "bootstrap" },
-        { name: "MySQL", iconName: "mysql" },
-        { name: ".NET", iconName: ".net" },
-      ],
-    },
-    {
-      degree: t("highschool_degree"),
-      institution: t("highschool"),
-      year: "2015 - 2020",
-      description: t("highschool_description"),
-      skills: [
-        { name: "Java", iconName: "java" },
-        { name: "C++", iconName: "cplusplus" },
-        { name: "MySQL", iconName: "mysql" },
-      ],
-    },
-  ];
+  const education = getEducation(t);
 
   return (
     <AnimatePresence>

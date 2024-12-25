@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const SkillCard = ({ category, skills, index }) => {
+const SkillCard = ({ skills, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}

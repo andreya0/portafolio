@@ -34,7 +34,28 @@
     "success": "Message sent successfully!",
     "follow_up": "Thank you for taking the time to write. I'll get back to you as soon as possible."
   },
+  "showmore": "Show More",
+  "showless": "Show Less",
   "highschool": "Alajuelita Technical Professional High School",
   "highschool_degree": "Bachelor of Business Informatics",
-  "highschool_description": "During my high school education, I acquired basic knowledge in <strong>programming</strong>, <strong>database administration</strong>, <strong>networks</strong>, <strong>hardware</strong>, and <strong>software</strong>. I participated in <strong>software development</strong> and <strong>system maintenance</strong> projects, strengthening my skills in <strong>problem solving</strong> and <strong>teamwork</strong>. My technical training provided me with a solid foundation to continue my studies in <strong>computer engineering</strong> and develop my career in the field of <strong>technology</strong>."
+  "highschool_description": "During my high school education, I acquired basic knowledge in <strong>programming</strong>, <strong>database administration</strong>, <strong>networks</strong>, <strong>hardware</strong>, and <strong>software</strong>. I participated in <strong>software development</strong> and <strong>system maintenance</strong> projects, strengthening my skills in <strong>problem solving</strong> and <strong>teamwork</strong>. My technical training provided me with a solid foundation to continue my studies in <strong>computer engineering</strong> and develop my career in the field of <strong>technology</strong>.",
+  "work_experience": "Work Experience",
+  "personal_projects": "Personal Projects",
+  "workexperience": {
+    "simetria": {
+      "position": "Full Stack Developer Intern",
+      "period": "Sep 2024 - Dec 2024",
+      "description_1": "I developed a <strong>complete application</strong>, from <strong>database design</strong> to <strong>user interface implementation</strong>, ensuring a functional and efficient product.",
+      "description_2": "Collaborated with a team of developers to <strong>optimize the application architecture</strong> and enhance the <strong>user experience</strong> through <strong>agile methodology</strong>.",
+      "description_3": "Designed and implemented <strong>backend and frontend features</strong> using <strong>modern technologies</strong> such as <strong>.NET Core</strong>, <strong>React</strong>, and <strong>MySQL</strong>, ensuring robust development.",
+      "description_4": "Participated in <strong>planning meetings</strong> and <strong>code reviews</strong> to ensure the <strong>quality</strong> and <strong>consistency</strong> of the final product."
+    }
+  },
+  "personalprojects": {
+    "portfolio": {
+      "title": "Personal Website",
+      "description": "I developed my personal portfolio to showcase my skills and projects. I used <strong>React</strong> and libraries like <strong>React-Router</strong>, <strong>i18React</strong>, with the help of <strong>TailwindCSS</strong> for styles, creating a complete web application with a modern and functional design."
+    }
+  },
+  "codigo": "View Code"
 }

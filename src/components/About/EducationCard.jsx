@@ -14,7 +14,7 @@ export default function EducationCard({ education, index }) {
   const isInView = useInView(ref, {
     once: true,
     amount: 0.2,
-    margin: "-100px",
+    margin: "30px",
   });
   const controls = useAnimation();
 
@@ -37,7 +37,7 @@ export default function EducationCard({ education, index }) {
       {/* Glow effect */}
       <motion.div
         variants={glowVariants}
-        className="absolute -inset-2 bg-gradient-to-r from-blue-500/10 via-purple-500/20 to-pink-500/20 rounded-lg blur-xl pointer-events-none"
+        className="absolute -inset-2 bg-gradient-to-r from-cyan-900/20 via-teal-800/30 to-cyan-900/20 rounded-lg blur-xl pointer-events-none"
       />
 
       <div className="flex items-start gap-4 relative z-10">
