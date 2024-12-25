@@ -155,7 +155,6 @@ export default function ContactPage() {
               <motion.form
                 className="space-y-4"
                 onSubmit={handleSubmit}
-                action={"https://formspree.io/f/xqaakvrz"}
                 method="POST"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
