@@ -15,7 +15,10 @@ export default function Navbar() {
     { name: t("work"), to: "/work" },
     { name: t("contact"), to: "/contact" },
   ];
-
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
   return (
     <nav className="fixed top-0 left-0 right-0 z-20 backdrop-blur-md bg-black/80 border-b border-white/10">
       <div className="max-w-screen-xl mx-auto px-4">
@@ -28,10 +31,17 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex-1 md:flex md:items-center md:justify-center">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-8 text-center items-center">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <NavLink to={item.to}>{item.name}</NavLink>
+                  <NavLink
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "instant" })
+                    }
+                    to={item.to}
+                  >
+                    {item.name}
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -55,10 +65,7 @@ export default function Navbar() {
             <ul className="px-4 py-3 space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <NavLink
-                    to={item.to}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  >
+                  <NavLink to={item.to} onClick={() => handleMenuItemClick()}>
                     {item.name}
                   </NavLink>
                 </li>

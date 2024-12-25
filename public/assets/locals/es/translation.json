@@ -3,6 +3,7 @@
   "position": "Desarollador Full Stack",
   "about": "Sobre mí",
   "cv": "Descargar CV",
+  "cv_explanation": "Descarga mi CV <br><i>Selecciona tu idioma preferido<br> para obtener la versión correspondiente.</i>",
   "work": "Experiencia",
   "contact": "Contacto",
   "home": "Home",
@@ -55,7 +56,7 @@
   "personalprojects": {
     "portfolio": {
       "title": "Sitio web personal",
-      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerias como <strong>React-Router</strong>, <strong>i18React</strong>, con ayuda de <strong>TailwindCSS</strong> para los estilos creando una aplicación web completa con un diseño moderno y funcional."
+      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerias como <strong>React-Router</strong>, <strong>i18Next</strong>, <strong>Framer Motion</strong>, con ayuda de <strong>TailwindCSS</strong> para los estilos creando una aplicación web completa con un diseño moderno y funcional."
     }
   },
   "codigo": "Ver código"

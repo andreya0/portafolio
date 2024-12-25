@@ -27,9 +27,9 @@ export default function ExperienceCard({
         whileHover={{ x: 10 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <span className="relative">
+        <span className="relative transition-colors duration-300 group-hover:text-cyan-300/80">
           {position}
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/30 group-hover:w-full transition-all duration-300" />
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300" />
         </span>
       </motion.h3>
 

@@ -72,7 +72,7 @@ export default function ProjectCard({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-black/50 to-transparent"
+                className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-black/10 to-transparent"
               />
             )}
           </AnimatePresence>

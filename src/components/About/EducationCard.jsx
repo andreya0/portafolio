@@ -1,7 +1,13 @@
-import { motion, useInView, useAnimation } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  AnimatePresence,
+} from "framer-motion";
+import { GraduationCap, ChevronDown, ChevronUp } from "lucide-react";
 import SkillCard from "./SkillCard";
-import { useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   containerVariants,
   iconVariants,
@@ -10,6 +16,11 @@ import {
 } from "../Animations/variants";
 
 export default function EducationCard({ education, index }) {
+  const { t } = useTranslation();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const descriptionRef = useRef(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
@@ -25,6 +36,18 @@ export default function EducationCard({ education, index }) {
       controls.start("hidden");
     }
   }, [isInView, controls]);
+
+  useEffect(() => {
+    if (descriptionRef.current) {
+      setIsOverflowing(descriptionRef.current.scrollHeight > 95);
+    }
+  }, [education.description]);
+
+  const handleExpandClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <motion.div
@@ -78,12 +101,48 @@ export default function EducationCard({ education, index }) {
             {education.year}
           </motion.p>
 
-          <motion.div
-            custom={3}
-            variants={textVariants}
-            className="text-gray-300 prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: education.description }}
-          />
+          <motion.div custom={3} variants={textVariants} className="relative">
+            <motion.div
+              ref={descriptionRef}
+              animate={{ height: isExpanded ? "auto" : "95px" }}
+              transition={{ duration: 0.3 }}
+              className="text-gray-300 prose prose-invert overflow-hidden"
+            >
+              <div
+                dangerouslySetInnerHTML={{ __html: education.description }}
+              />
+            </motion.div>
+
+            <AnimatePresence>
+              {isOverflowing && !isExpanded && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-black/10 to-transparent"
+                />
+              )}
+            </AnimatePresence>
+
+            {isOverflowing && (
+              <button
+                onClick={handleExpandClick}
+                className="mt-2 flex items-center gap-1 text-sm text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer z-10 relative"
+              >
+                {isExpanded ? (
+                  <>
+                    <ChevronUp className="w-4 h-4" />
+                    {t("showless")}
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-4 h-4" />
+                    {t("showmore")}
+                  </>
+                )}
+              </button>
+            )}
+          </motion.div>
 
           {education.skills && education.skills.length > 0 && (
             <motion.div custom={4} variants={textVariants} className="pt-2">

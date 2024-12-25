@@ -6,9 +6,14 @@ import LinkedInIcon from "../../public/icons/linkedln";
 import ButtonMainPage from "../components/Main/ButtonMainPage";
 import CV from "../../public/icons/cv";
 import { Mail } from "lucide-react";
+import i18next from "i18next";
 export default function MainPage() {
   const name = "Andrey Arroyo Gómez";
   const { t } = useTranslation();
+  const cvPath =
+    i18next.language == "es"
+      ? "/files/ANDREY-ARROYO-CV-ES.pdf"
+      : "/files/ANDREY-ARROYO-CV-EN.pdf";
 
   return (
     <AnimatePresence>
@@ -128,7 +133,9 @@ export default function MainPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.img
-                  src="/img/profile.jpg?w=200&fm=webp"
+                  srcSet="/img/profile.jpeg?w=200&fm=webp 200w, /img/profile.jpeg?w=400&fm=webp 400w, /img/profile.jpeg?w=800&fm=webp 800w"
+                  sizes="(max-width: 600px) 200px, (max-width: 1200px) 400px, 800px"
+                  src="/img/profile.jpeg?w=200&fm=webp"
                   alt="Andrey_Arroyo_Gomez_img"
                   rel="preload"
                   loading="lazy"
@@ -232,21 +239,27 @@ export default function MainPage() {
               >
                 <Mail className="h-8 w-8 xl:h-9 xl:w-9" />
               </button>
-              <span className="absolute left-1/2 transform -translate-x-1/2 -top-10 w-max p-1 text-sm text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
+              <span className="absolute left-1/2 transform -translate-x-1/2 -top-8 w-max p-1 text-xs text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
                 andreyarroyo02@gmail.com
               </span>
             </div>
             <div className="relative group">
               <button
                 className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200 peer"
-                onClick={() => window.open("/path/to/your/cv.pdf", "_blank")}
-                aria-label="Download CV"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = cvPath;
+                  link.download = cvPath.split("/").pop();
+                  link.click();
+                }}
+                aria-label={t("cv")}
               >
                 <CV className="h-8 w-8 xl:h-9 xl:w-9" />
               </button>
-              <span className="absolute left-1/2 transform -translate-x-1/2 -top-10 w-max p-[5px] text-sm text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none">
-                {t("cv")}
-              </span>
+              <span
+                className="text-center absolute left-1/2 transform -translate-x-1/2 -top-14 w-max p-[5px] text-xs text-white bg-black/60 rounded opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-hover:pointer-events-auto pointer-events-none"
+                dangerouslySetInnerHTML={{ __html: t("cv_explanation") }}
+              ></span>
             </div>
           </motion.div>
         </div>

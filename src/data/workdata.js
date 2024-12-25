@@ -32,7 +32,7 @@ export const getProjects = (t) => [
       { name: "JavaScript", iconName: "javascript" },
       { name: "Tailwind CSS", iconName: "tailwind" },
     ],
-    image: "https://i.ibb.co/8xZzpnr/Captura-de-pantalla-2024-12-24-200857.png",
+    image: "https://i.ibb.co/7223FPJ/Captura.png",
     githubLink: "https://github.com/andreya0/portafolio",
   },
 ];
