@@ -56,7 +56,21 @@
     "portfolio": {
       "title": "Personal Website",
       "description": "I developed my personal portfolio to showcase my skills and projects. I used <strong>React</strong> and libraries like <strong>React-Router</strong>, <strong>i18Next</strong>,<strong> Framer motion </strong>, with the help of <strong>TailwindCSS</strong> for styling, creating a complete web application with a modern and functional design."
+    },
+    "gymapp": {
+      "title": "Gym App",
+      "description": "I am developing a <strong>modular Full-Stack application</strong> for gym management using a <strong>multi-layered architecture</strong> to ensure <strong>scalability</strong>, <strong>flexibility</strong>, and <strong>maintainability</strong>. The project focuses on key features such as <strong>user and role management</strong>, <strong>gym entity management</strong>, and <strong>robust security mechanisms</strong>, leveraging <strong>modern technologies</strong>."
     }
   },
-  "codigo": "View Code"
+  "codigo": "View Code",
+  "viewDetails": "View more details",
+  "about_project": "About the project",
+  "demo": "View live demo",
+  "key_features": "Key Features",
+  "tech_stack": "Tech Stack",
+  "project_overview": "Project Overview",
+  "started": "Started",
+  "duration": "Duration",
+  "team": "Team",
+  "project_gallery": "Project Gallery"
 }

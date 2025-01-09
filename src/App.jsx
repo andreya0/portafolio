@@ -8,6 +8,7 @@ import WorkPage from "./pages/WorkPage";
 
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/NavBar/Navbar";
+import GymApp from "./pages/Work/GymAppPage";
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
     location.pathname === "/" ||
     location.pathname === "/about" ||
     location.pathname === "/work" ||
+    location.pathname === "/work/gym-app" ||
     location.pathname === "/contact";
   return (
     <>
@@ -26,6 +28,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/work/gym-app" element={<GymApp />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

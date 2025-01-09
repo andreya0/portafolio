@@ -56,8 +56,22 @@
   "personalprojects": {
     "portfolio": {
       "title": "Sitio web personal",
-      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerias como <strong>React-Router</strong>, <strong>i18Next</strong>, <strong>Framer Motion</strong>, con ayuda de <strong>TailwindCSS</strong> para los estilos creando una aplicación web completa con un diseño moderno y funcional."
+      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerías como <strong>React-Router</strong>, <strong>i18Next</strong>,<strong> Framer motion </strong>, con la ayuda de <strong>TailwindCSS</strong> para el estilo, creando una aplicación web completa con un diseño moderno y funcional."
+    },
+    "gymapp": {
+      "title": "Aplicación de gimnasio",
+      "description": "Estoy desarrollando una aplicación modular Full-Stack para la gestión de gimnasios utilizando una <strong>arquitectura multicapa</strong> para asegurar la <strong>escalabilidad</strong>, <strong>flexibilidad</strong> y <strong>mantenibilidad</strong>. El proyecto se centra en características clave como la <strong>gestión de usuarios y roles</strong>, la <strong>gestión de entidades del gimnasio</strong> y mecanismos de <strong>seguridad robustos</strong>, aprovechando <strong>tecnologías modernas</strong>."
     }
   },
-  "codigo": "Ver código"
+  "codigo": "Ver código",
+  "viewDetails": "Ver más detalles",
+  "about_project": "Acerca del proyecto",
+  "demo": "Ver demostración",
+  "key_features": "Características",
+  "tech_stack": "Tecnologías",
+  "project_overview": "Descripción del proyecto",
+  "started": "Iniciado",
+  "duration": "Duración",
+  "team": "Equipo",
+  "project_gallery": "Galería de imagenes"
 }

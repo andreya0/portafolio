@@ -1,3 +1,5 @@
+import { image } from "framer-motion/client";
+
 export const getWorkExperience = (t) => [
   {
     position: t("workexperience.simetria.position"),
@@ -25,6 +27,23 @@ export const getWorkExperience = (t) => [
 
 export const getProjects = (t) => [
   {
+    title: t("personalprojects.gymapp.title"),
+    description: t("personalprojects.gymapp.description"),
+    skills: [
+      { name: "Spring", iconName: "springboot" },
+      { name: "Docker", iconName: "docker" },
+      { name: "Redis", iconName: "redis" },
+      { name: "MySQL", iconName: "mysql" },
+      { name: "Tailwind CSS", iconName: "tailwind" },
+      { name: "TypeScript", iconName: "typescript" },
+      { name: "Redux", iconName: "redux" },
+      { name: "Next.js", iconName: "nextjs" },
+    ],
+    image: "https://i.ibb.co/cNZJ8Df/Imagen.png",
+    imagePosition: "center 20%",
+    detailsLink: "/work/gym-app",
+  },
+  {
     title: t("personalprojects.portfolio.title"),
     description: t("personalprojects.portfolio.description"),
     skills: [
@@ -33,6 +52,7 @@ export const getProjects = (t) => [
       { name: "Tailwind CSS", iconName: "tailwind" },
     ],
     image: "https://i.ibb.co/7223FPJ/Captura.png",
+    imagePosition: "31% center",
     githubLink: "https://github.com/andreya0/portafolio",
   },
 ];
