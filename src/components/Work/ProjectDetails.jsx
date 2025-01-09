@@ -15,6 +15,7 @@ export default function ProjectDetails({
   duration,
   team,
   startDate,
+  backgroundImg,
 }) {
   const { t } = useTranslation();
   return (
@@ -22,7 +23,7 @@ export default function ProjectDetails({
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${images?.[0]})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${backgroundImg})`,
         }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -38,7 +39,7 @@ export default function ProjectDetails({
         >
           <div className="text-center px-4">
             <motion.h1
-              className="text-5xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80"
+              className="text-5xl font-extrabold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 hover:from-white/80 hover:to-white/40 transition-all duration-500"
               initial={{ y: 20 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}

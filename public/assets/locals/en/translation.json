@@ -59,7 +59,24 @@
     },
     "gymapp": {
       "title": "Gym App",
-      "description": "I am developing a <strong>modular Full-Stack application</strong> for gym management using a <strong>multi-layered architecture</strong> to ensure <strong>scalability</strong>, <strong>flexibility</strong>, and <strong>maintainability</strong>. The project focuses on key features such as <strong>user and role management</strong>, <strong>gym entity management</strong>, and <strong>robust security mechanisms</strong>, leveraging <strong>modern technologies</strong>."
+      "description": "I am developing a <strong>modular Full-Stack application</strong> for gym management, leveraging a <strong>multi-layered architecture</strong> for <strong>scalability</strong>, <strong>flexibility</strong>, and <strong>maintainability</strong>. The project is a <strong>work in progress</strong>, focusing on features like <strong>role-based access control</strong>, <strong>user and gym entity management</strong>, <strong>secure authentication</strong>, and <strong>performance optimization</strong> using <strong>modern technologies</strong> such as Java, Spring Boot, Next.js, and Tailwind CSS."
+    }
+  },
+  "details": {
+    "gymapp": {
+      "title": "Gym App",
+      "description": "<p>A full-stack web application designed to manage gym memberships, user authentication, and other related functionalities. Built with a modular backend architecture and a modern frontend stack, this project is currently in its early stages of development.</p><p>The App aims to streamline gym operations by offering features such as role-based access control, user and gym entity management, and secure authentication. While the backend provides a robust and scalable foundation, the frontend offers an intuitive and responsive user interface.</p>",
+      "startDate": "December 2024",
+      "team": "2 Developers",
+      "duration": "Still in development",
+      "features": {
+        "rolePermissionManagement": "Role-based access control with dynamic permissions for users such as admins, coaches, and gym members.",
+        "authenticationAuthorization": "Secure JWT-based authentication with features for login, registration, and password recovery.",
+        "gymUserManagement": "Functionality for creating, editing, and managing gym and user entities.",
+        "emailIntegration": "Email services for account verification and password reset using SendGrid.",
+        "performanceOptimization": "Caching mechanisms implemented with Redis for faster data retrieval.",
+        "deploymentReady": "Dockerized for seamless deployment and scalability."
+      }
     }
   },
   "codigo": "View Code",

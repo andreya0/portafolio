@@ -27,42 +27,6 @@
   "about_2": "Aunque me especializo en desarrollo full-stack, me veo a mí mismo como un solucionador de problemas de corazón. Ya sea optimizando experiencias de usuario o construyendo backends robustos, siempre estoy enfocado en crear código limpio, eficiente y significativo que sirva al panorama general.",
   "contact_me": "Contáctame",
   "contact_info": "Información de contacto",
-  "contact_form": {
-    "name": "Tu nombre",
-    "email": "Tu correo electrónico",
-    "message": "Tu mensaje",
-    "send": "Enviar mensaje",
-    "success": "¡Mensaje enviado con éxito!",
-    "follow_up": "Gracias por tomarte el tiempo para escribir. Me pondré en contacto contigo a la brevedad posible."
-  },
-  "showmore": "Ver más",
-  "showless": "Ver menos",
-  "highschool": "Colegio Técnico Profesional de Alajuelita",
-  "highschool_degree": "Bachillerato en Informática Empresarial",
-  "highschool_description": "Durante mi educación secundaria, adquirí conocimientos básicos en <strong>programación</strong>, <strong>administración de bases de datos</strong>, <strong>redes</strong>, <strong>hardware</strong> y <strong>software</strong>. Participé en proyectos de <strong>desarrollo de software</strong> y <strong>mantenimiento de sistemas</strong>, fortaleciendo mis habilidades en <strong>resolución de problemas</strong> y <strong>trabajo en equipo</strong>. Mi formación técnica me proporcionó una base sólida para continuar mis estudios en <strong>ingeniería informática</strong> y desarrollar mi carrera en el campo de la <strong>tecnología</strong>.",
-  "work_experience": "Experiencia laboral",
-  "personal_projects": "Proyectos personales",
-  "workexperience": {
-    "simetria": {
-      "position": "Pasante Desarrollador Full Stack",
-      "period": "Sep 2024 - Dic 2024",
-      "description_1": "Desarrollé una <strong>aplicación completa</strong>, desde el <strong>diseño de la base de datos</strong> hasta la <strong>implementación de la interfaz de usuario</strong>, asegurando un producto funcional y eficiente.",
-      "description_2": "Colaboré con un equipo de desarrolladores para <strong>optimizar la arquitectura de la aplicación</strong> y mejorar la <strong>experiencia del usuario</strong> mediante la <strong>metodología ágil</strong>.",
-      "description_3": "Diseñé e implementé <strong>funcionalidades backend y frontend</strong> utilizando <strong>tecnologías modernas</strong> como <strong>.NET Core</strong>, <strong>React</strong> y <strong>MySQL</strong>, asegurando un desarrollo robusto.",
-      "description_4": "Participé en <strong>reuniones de planificación</strong> y <strong>revisión de código</strong> para garantizar la <strong>calidad</strong> y <strong>coherencia</strong> del producto final."
-    }
-  },
-
-  "personalprojects": {
-    "portfolio": {
-      "title": "Sitio web personal",
-      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerías como <strong>React-Router</strong>, <strong>i18Next</strong>,<strong> Framer motion </strong>, con la ayuda de <strong>TailwindCSS</strong> para el estilo, creando una aplicación web completa con un diseño moderno y funcional."
-    },
-    "gymapp": {
-      "title": "Aplicación de gimnasio",
-      "description": "Estoy desarrollando una aplicación modular Full-Stack para la gestión de gimnasios utilizando una <strong>arquitectura multicapa</strong> para asegurar la <strong>escalabilidad</strong>, <strong>flexibilidad</strong> y <strong>mantenibilidad</strong>. El proyecto se centra en características clave como la <strong>gestión de usuarios y roles</strong>, la <strong>gestión de entidades del gimnasio</strong> y mecanismos de <strong>seguridad robustos</strong>, aprovechando <strong>tecnologías modernas</strong>."
-    }
-  },
   "codigo": "Ver código",
   "viewDetails": "Ver más detalles",
   "about_project": "Acerca del proyecto",
@@ -73,5 +37,57 @@
   "started": "Iniciado",
   "duration": "Duración",
   "team": "Equipo",
-  "project_gallery": "Galería de imagenes"
+  "project_gallery": "Galería de imagenes",
+  "showmore": "Ver más",
+  "showless": "Ver menos",
+  "highschool": "Colegio Técnico Profesional de Alajuelita",
+  "highschool_degree": "Bachillerato en Informática Empresarial",
+  "highschool_description": "Durante mi educación secundaria, adquirí conocimientos básicos en <strong>programación</strong>, <strong>administración de bases de datos</strong>, <strong>redes</strong>, <strong>hardware</strong> y <strong>software</strong>. Participé en proyectos de <strong>desarrollo de software</strong> y <strong>mantenimiento de sistemas</strong>, fortaleciendo mis habilidades en <strong>resolución de problemas</strong> y <strong>trabajo en equipo</strong>. Mi formación técnica me proporcionó una base sólida para continuar mis estudios en <strong>ingeniería informática</strong> y desarrollar mi carrera en el campo de la <strong>tecnología</strong>.",
+  "work_experience": "Experiencia laboral",
+  "personal_projects": "Proyectos personales",
+  "contact_form": {
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "follow_up": "Gracias por tomarte el tiempo para escribir. Me pondré en contacto contigo a la brevedad posible."
+  },
+  "workexperience": {
+    "simetria": {
+      "position": "Pasante Desarrollador Full Stack",
+      "period": "Sep 2024 - Dic 2024",
+      "description_1": "Desarrollé una <strong>aplicación completa</strong>, desde el <strong>diseño de la base de datos</strong> hasta la <strong>implementación de la interfaz de usuario</strong>, asegurando un producto funcional y eficiente.",
+      "description_2": "Colaboré con un equipo de desarrolladores para <strong>optimizar la arquitectura de la aplicación</strong> y mejorar la <strong>experiencia del usuario</strong> mediante la <strong>metodología ágil</strong>.",
+      "description_3": "Diseñé e implementé <strong>funcionalidades backend y frontend</strong> utilizando <strong>tecnologías modernas</strong> como <strong>.NET Core</strong>, <strong>React</strong> y <strong>MySQL</strong>, asegurando un desarrollo robusto.",
+      "description_4": "Participé en <strong>reuniones de planificación</strong> y <strong>revisión de código</strong> para garantizar la <strong>calidad</strong> y <strong>coherencia</strong> del producto final."
+    }
+  },
+  "personalprojects": {
+    "portfolio": {
+      "title": "Sitio web personal",
+      "description": "Desarrollé mi portafolio personal para mostrar mis habilidades y proyectos. Utilicé <strong>React</strong> y librerías como <strong>React-Router</strong>, <strong>i18Next</strong>,<strong> Framer motion </strong>, con la ayuda de <strong>TailwindCSS</strong> para el estilo, creando una aplicación web completa con un diseño moderno y funcional."
+    },
+    "gymapp": {
+      "title": "Aplicación de gimnasio",
+      "description": "Estoy desarrollando una <strong>aplicación modular Full-Stack</strong> para la gestión de gimnasios, aprovechando una <strong>arquitectura multicapa</strong> para <strong>escalabilidad</strong>, <strong>flexibilidad</strong> y <strong>mantenibilidad</strong>. El proyecto está en <strong>proceso de desarrollo</strong>, enfocándose en características como <strong>control de acceso basado en roles</strong>, <strong>gestión de usuarios y entidades del gimnasio</strong>, <strong>autenticación segura</strong> y <strong>optimización del rendimiento</strong> utilizando <strong>tecnologías modernas</strong> como Java, Spring Boot, Next.js y Tailwind CSS."
+    }
+  },
+  "details": {
+    "gymapp": {
+      "title": "Gym App",
+      "description": "<p>Una aplicación web full-stack diseñada para gestionar membresías de gimnasio, autenticación de usuarios y otras funcionalidades relacionadas. Construida con una arquitectura backend modular y un stack frontend moderno, este proyecto se encuentra actualmente en sus primeras etapas de desarrollo.</p><p>La aplicación tiene como objetivo optimizar las operaciones del gimnasio ofreciendo características como control de acceso basado en roles, gestión de usuarios y entidades del gimnasio, y autenticación segura. Mientras que el backend proporciona una base robusta y escalable, el frontend ofrece una interfaz de usuario intuitiva y responsiva.</p>",
+      "startDate": "Diciembre, 2024",
+      "team": "2 Desarrolladores",
+      "duration": "En desarrollo",
+      "features": {
+        "rolePermissionManagement": "Control de acceso basado en roles con permisos dinámicos para usuarios como administradores, entrenadores y miembros del gimnasio.",
+        "authenticationAuthorization": "Autenticación segura basada en JWT con funcionalidades para inicio de sesión, registro y recuperación de contraseña.",
+        "gymUserManagement": "Funcionalidad para crear, editar y gestionar entidades de gimnasio y usuarios.",
+        "emailIntegration": "Servicios de correo electrónico para verificación de cuenta y restablecimiento de contraseña usando SendGrid.",
+        "performanceOptimization": "Mecanismos de almacenamiento en caché implementados con Redis para una recuperación de datos más rápida.",
+        "deploymentReady": "Dockerizado para un despliegue y escalabilidad sin problemas."
+      }
+    }
+  }
 }
