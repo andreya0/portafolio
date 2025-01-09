@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { ExternalLink, Calendar, Clock, Users } from "lucide-react";
 import SkillCard from "../About/SkillCard";
 import { motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
 import { useTranslation } from "react-i18next";
+import FullScreenCarousel from "./FullScreenCarousel";
 
 export default function ProjectDetails({
   title,
@@ -18,6 +19,14 @@ export default function ProjectDetails({
   backgroundImg,
 }) {
   const { t } = useTranslation();
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleImageClick = (index) => {
+    setCurrentImageIndex(index);
+    setIsFullScreen(true);
+  };
+
   return (
     <div className="relative min-h-screen flex flex-col bg-black">
       <motion.div
@@ -89,7 +98,10 @@ export default function ProjectDetails({
                   <h2 className="text-2xl font-bold text-white mb-6">
                     {t("project_gallery")}
                   </h2>
-                  <ImageCarousel images={images} />
+                  <ImageCarousel
+                    images={images}
+                    onImageClick={() => handleImageClick(currentImageIndex)}
+                  />
                 </section>
               )}
 
@@ -159,6 +171,13 @@ export default function ProjectDetails({
           </div>
         </div>
       </div>
+
+      <FullScreenCarousel
+        images={images}
+        initialIndex={currentImageIndex}
+        isOpen={isFullScreen}
+        onClose={() => setIsFullScreen(false)}
+      />
     </div>
   );
 }

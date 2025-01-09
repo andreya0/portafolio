@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function ImageCarousel({ images }) {
+export default function ImageCarousel({ images, onImageClick }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -39,7 +39,7 @@ export default function ImageCarousel({ images }) {
   };
 
   return (
-    <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+    <div className="relative w-full aspect-video rounded-xl overflow-hidden group">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
@@ -63,7 +63,8 @@ export default function ImageCarousel({ images }) {
               paginate(-1);
             }
           }}
-          className="absolute inset-0"
+          className="absolute inset-0 cursor-pointer"
+          onClick={onImageClick}
         >
           <img
             src={images[currentIndex]}
