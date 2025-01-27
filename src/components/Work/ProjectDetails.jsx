@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ImageCarousel from "./ImageCarousel";
 import { useTranslation } from "react-i18next";
 import FullScreenCarousel from "./FullScreenCarousel";
+import GitHubIcon from "../../../public/icons/github";
 
 export default function ProjectDetails({
   title,
@@ -17,6 +18,7 @@ export default function ProjectDetails({
   team,
   startDate,
   backgroundImg,
+  github,
 }) {
   const { t } = useTranslation();
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -71,6 +73,17 @@ export default function ProjectDetails({
                   <span className="font-medium">{t("demo")}</span>
                 </a>
               </motion.div>
+            )}
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all duration-300 backdrop-blur-sm hover:scale-105 transform"
+              >
+                <GitHubIcon className="w-5 h-5 mr-1" />
+                <span className="font-medium">{t("codigo")}</span>
+              </a>
             )}
           </div>
         </motion.div>
@@ -139,25 +152,30 @@ export default function ProjectDetails({
                   {t("project_overview")}
                 </h2>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Calendar className="w-5 h-5 text-white/80" />
-                    <span>
-                      {t("started")}: {startDate}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Clock className="w-5 h-5 text-white/80" />
-                    <span>
-                      {" "}
-                      {t("duration")}: {duration}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Users className="w-5 h-5 text-white/80" />
-                    <span>
-                      {t("team")}: {team}
-                    </span>
-                  </div>
+                  {startDate && (
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Calendar className="w-5 h-5 text-white/80" />
+                      <span>
+                        {t("started")}: {startDate}
+                      </span>
+                    </div>
+                  )}
+                  {duration && (
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Clock className="w-5 h-5 text-white/80" />
+                      <span>
+                        {t("duration")}: {duration}
+                      </span>
+                    </div>
+                  )}
+                  {team && (
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Users className="w-5 h-5 text-white/80" />
+                      <span>
+                        {t("team")}: {team}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </section>
 

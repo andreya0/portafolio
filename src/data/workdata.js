@@ -1,4 +1,4 @@
-import { image } from "framer-motion/client";
+import { details } from "framer-motion/client";
 
 export const getWorkExperience = (t) => [
   {
@@ -27,7 +27,27 @@ export const getWorkExperience = (t) => [
 
 export const getProjects = (t) => [
   {
-    title: t("personalprojects.gymapp.title"),
+    title: t("personalprojects.livepulse.title"),
+    description: t("personalprojects.livepulse.description"),
+    skills: [
+      { name: "React", iconName: "react" },
+      { name: "TypeScript", iconName: "typescript" },
+      { name: "Spring", iconName: "springboot" },
+      { name: "Tailwind CSS", iconName: "tailwind" },
+      { name: "MongoDB", iconName: "mongo" },
+      { name: "Docker", iconName: "docker" },
+      { name: "Redis", iconName: "redis" },
+      { name: "Kafka", iconName: "kafka" },
+      { name: "Nginx", iconName: "nginx" },
+      { name: "Vite.js", iconName: "vite" },
+    ],
+    image: "https://i.ibb.co/SdHqk4D/main.png",
+    imagePosition: "center 20%",
+    detailsLink: "/work/live-pulse",
+  },
+
+  {
+    title: t("details.gymapp.title"),
     description: t("personalprojects.gymapp.description"),
     skills: [
       { name: "Spring", iconName: "springboot" },
@@ -38,6 +58,7 @@ export const getProjects = (t) => [
       { name: "TypeScript", iconName: "typescript" },
       { name: "Redux", iconName: "redux" },
       { name: "Next.js", iconName: "nextjs" },
+      { name: "Hibernate", iconName: "hibernate" },
     ],
     image: "https://i.ibb.co/cNZJ8Df/Imagen.png",
     imagePosition: "center 20%",
@@ -70,6 +91,7 @@ export const getGymAppDetails = (t) => ({
     { name: "TypeScript", iconName: "typescript" },
     { name: "Redux", iconName: "redux" },
     { name: "React", iconName: "react" },
+    { name: "Hibernate", iconName: "hibernate" },
   ],
   backgroundImg:
     "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -89,4 +111,45 @@ export const getGymAppDetails = (t) => ({
   duration: t("details.gymapp.duration"),
   team: t("details.gymapp.team"),
   startDate: t("details.gymapp.startDate"),
+});
+
+export const getLivePulseDetails = (t) => ({
+  title: t("personalprojects.livepulse.title"),
+  description: t("details.livepulse.description"),
+  technologies: [
+    { name: "React", iconName: "react" },
+    { name: "TypeScript", iconName: "typescript" },
+    { name: "Spring", iconName: "springboot" },
+    { name: "Tailwind CSS", iconName: "tailwind" },
+    { name: "MongoDB", iconName: "mongo" },
+    { name: "Docker", iconName: "docker" },
+    { name: "Redis", iconName: "redis" },
+    { name: "Kafka", iconName: "kafka" },
+    { name: "Nginx", iconName: "nginx" },
+    { name: "Vite.js", iconName: "vite" },
+  ],
+  backgroundImg:
+    "https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  images: [
+    "https://i.ibb.co/SdHqk4D/main.png",
+    "https://i.ibb.co/GRXD8js/streaming-page.png",
+    "https://i.ibb.co/tz8fXWC/phoneview.jpg",
+    "https://i.ibb.co/v1CQxwv/Config-Page.png",
+    "https://i.ibb.co/YXLwZbc/Offline.png",
+    "https://i.ibb.co/QF79nCZ/Inicio-Sesion.png",
+  ],
+  liveDemo: "",
+  features: [
+    t("details.livepulse.features.realTimeInteraction"),
+    t("details.livepulse.features.streamManagement"),
+    t("details.livepulse.features.userExperience"),
+    t("details.livepulse.features.eventDrivenArchitecture"),
+    t("details.livepulse.features.scalableMicroservices"),
+    t("details.livepulse.features.hybridCommunication"),
+    t("details.livepulse.features.dataPersistence"),
+    t("details.livepulse.features.productionReady"),
+    t("details.livepulse.features.mobileFirstDesign"),
+  ],
+  duration: t("details.livepulse.duration"),
+  github: "https://github.com/andreya0/Live-Pulse",
 });

@@ -60,6 +60,10 @@
     "gymapp": {
       "title": "Gym App",
       "description": "I am developing a <strong>modular Full-Stack application</strong> for gym management, leveraging a <strong>multi-layered architecture</strong> for <strong>scalability</strong>, <strong>flexibility</strong>, and <strong>maintainability</strong>. The project is a <strong>work in progress</strong>, focusing on features like <strong>role-based access control</strong>, <strong>user and gym entity management</strong>, <strong>secure authentication</strong>, and <strong>performance optimization</strong> using <strong>modern technologies</strong> such as Java, Spring Boot, Next.js, and Tailwind CSS."
+    },
+    "livepulse": {
+      "title": "Live Pulse",
+      "description": "This <strong>full-stack project</strong> is a <strong>live streaming platform</strong> that combines a <strong>modern React frontend</strong> with a <strong>Spring Boot microservice backend</strong>. It enables users to <strong>stream video</strong>, interact via <strong>real-time chat</strong>, follow <strong>streamers</strong>, and manage profiles. The system emphasizes an <strong>event-driven architecture</strong>, <strong>real-time communication</strong>, and <strong>scalability</strong>, with features like <strong>chat message</strong> persistence."
     }
   },
   "details": {
@@ -76,6 +80,23 @@
         "emailIntegration": "Email services for account verification and password reset using SendGrid.",
         "performanceOptimization": "Caching mechanisms implemented with Redis for faster data retrieval.",
         "deploymentReady": "Dockerized for seamless deployment and scalability."
+      }
+    },
+    "livepulse": {
+      "title": "Live Pulse",
+      "description": "<p>This full-stack project is a live streaming platform that combines a modern frontend with React and TypeScript, and a microservice-based backend with Spring Boot. It allows users to stream videos, interact via real-time chat, follow streamers, and manage profiles. The system emphasizes an event-driven architecture, real-time communication, and scalability.</p>",
+      "duration": "3 weeks",
+      "features": {
+        "realTimeInteraction": "Real-time chat based on WebSocket/STOMP with persistence in MongoDB via Kafka, audience metrics with Redis, and event-driven notifications powered by Kafka.",
+        "streamManagement": "RTMP/HLS video streaming with transcoding using Nginx-RTMP and FFmpeg, thumbnail generation with FFmpeg, and metadata storage in MongoDB.",
+        "userExperience": "Streamer following system with real-time updates, profile management, and responsive design with Tailwind CSS.",
+        "eventDrivenArchitecture": "Use of Kafka for message flows and stream lifecycle, and Redis Pub/Sub for metrics updates.",
+        "scalableMicroservices": "Scalable microservices with Docker and Kafka.",
+        "hybridCommunication": "Hybrid communication (WebSocket + SSE + Redis) to balance performance and complexity.",
+        "dataPersistence": "Resilient data persistence, such as chat messages stored post-stream to reduce load.",
+        "adaptiveStreaming": "Adaptive streaming with HLS/DASH to ensure dynamic quality.",
+        "productionReady": "Production practices like API testing with Postman, CORS configuration, and monitoring with Spring Boot Actuator.",
+        "mobileFirstDesign": "Mobile-first design with Tailwind CSS and performance optimizations with React Query."
       }
     }
   },

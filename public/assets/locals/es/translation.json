@@ -71,6 +71,10 @@
     "gymapp": {
       "title": "Aplicación de gimnasio",
       "description": "Estoy desarrollando una <strong>aplicación modular Full-Stack</strong> para la gestión de gimnasios, aprovechando una <strong>arquitectura multicapa</strong> para <strong>escalabilidad</strong>, <strong>flexibilidad</strong> y <strong>mantenibilidad</strong>. El proyecto está en <strong>proceso de desarrollo</strong>, enfocándose en características como <strong>control de acceso basado en roles</strong>, <strong>gestión de usuarios y entidades del gimnasio</strong>, <strong>autenticación segura</strong> y <strong>optimización del rendimiento</strong> utilizando <strong>tecnologías modernas</strong> como Java, Spring Boot, Next.js y Tailwind CSS."
+    },
+    "livepulse": {
+      "title": "Live Pulse",
+      "description": "Este <strong>proyecto full-stack</strong> es una <strong>plataforma de transmisión en vivo</strong> que combina un <strong>frontend moderno con React</strong> y un <strong>backend de microservicios con Spring Boot</strong>. Permite a los usuarios <strong>transmitir videos</strong>, interactuar mediante <strong>chat en tiempo real</strong>, seguir a <strong>streamers</strong> y gestionar perfiles. El sistema enfatiza una <strong>arquitectura basada en eventos</strong>, <strong>comunicación en tiempo real</strong> y <strong>escalabilidad</strong>, con características como la persistencia de <strong>mensajes de chat</strong>."
     }
   },
   "details": {
@@ -87,6 +91,23 @@
         "emailIntegration": "Servicios de correo electrónico para verificación de cuenta y restablecimiento de contraseña usando SendGrid.",
         "performanceOptimization": "Mecanismos de almacenamiento en caché implementados con Redis para una recuperación de datos más rápida.",
         "deploymentReady": "Dockerizado para un despliegue y escalabilidad sin problemas."
+      }
+    },
+    "livepulse": {
+      "title": "Live Pulse",
+      "description": "<p>Este proyecto full-stack es una plataforma de transmisión en vivo que combina un frontend moderno con React y TypeScript, y un backend basado en microservicios con Spring Boot. Permite a los usuarios transmitir videos, interactuar mediante chat en tiempo real, seguir streamers y gestionar perfiles. El sistema enfatiza una arquitectura basada en eventos, comunicación en tiempo real y escalabilidad.</p>",
+      "duration": "3 semanas",
+      "features": {
+        "realTimeInteraction": "Chat en tiempo real basado en WebSocket/STOMP con persistencia en MongoDB mediante Kafka, métricas de audiencia con Redis, y notificaciones impulsadas por eventos de Kafka.",
+        "streamManagement": "Transmisión de video RTMP/HLS con transcodificación mediante Nginx-RTMP y FFmpeg, generación de miniaturas con FFmpeg, y almacenamiento de metadatos en MongoDB.",
+        "userExperience": "Sistema de seguimiento de streamers con actualizaciones en tiempo real, gestión de perfiles y diseño responsive con Tailwind CSS.",
+        "eventDrivenArchitecture": "Uso de Kafka para flujos de mensajes y ciclo de vida de streams, y Redis Pub/Sub para actualizaciones de métricas.",
+        "scalableMicroservices": "Microservicios escalables con Docker y Kafka.",
+        "hybridCommunication": "Comunicación híbrida (WebSocket + SSE + Redis) para equilibrar rendimiento y complejidad.",
+        "dataPersistence": "Persistencia resiliente de datos, como los mensajes de chat almacenados después de la transmisión para reducir la carga.",
+        "adaptiveStreaming": "Streaming adaptativo con HLS/DASH para asegurar calidad dinámica.",
+        "productionReady": "Prácticas de producción como pruebas de API con Postman, configuración de CORS y monitoreo con Spring Boot Actuator.",
+        "mobileFirstDesign": "Diseño mobile-first con Tailwind CSS y optimizaciones de rendimiento con React Query."
       }
     }
   }

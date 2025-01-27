@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronDown, ChevronUp, Github, ExternalLink } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import SkillCard from "../About/SkillCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-
+import GitHubIcon from "../../../public/icons/github";
 export default function ProjectCard({
   title,
   description,
@@ -41,7 +41,7 @@ export default function ProjectCard({
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-white/10 text-white hover:bg-white/20 transition-colors duration-300 group/link"
         >
-          <Github className="w-6 h-6 text-gray-300 transform group-hover/link:rotate-12 transition-transform duration-300" />
+          <GitHubIcon className="w-6 h-6 text-gray-300 transform group-hover/link:rotate-12 transition-transform duration-300" />
           <span className="font-medium">{t("codigo")}</span>
           <svg
             className="w-4 h-4 text-gray-300 transform group-hover/link:translate-x-1 transition-transform duration-300"
@@ -91,7 +91,6 @@ export default function ProjectCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10 hover:border-white/20 transition-all flex flex-col"
     >
-      {/* Image Container with Overlay */}
       <div className="relative h-48 flex-shrink-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover transform transition-transform duration-500 ease-out scale-100 group-hover:scale-105"
@@ -102,7 +101,6 @@ export default function ProjectCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-100 group-hover:opacity-90 transition-opacity duration-500" />
 
-        {/* Title Overlay */}
         <div className="absolute bottom-0 left-0 right-0 px-6 py-1">
           <h3 className="text-xl font-semibold text-white mb-2 transform translate-y-0 group-hover:-translate-y-1 transition-transform duration-300">
             {title}
@@ -110,9 +108,7 @@ export default function ProjectCard({
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-6 pt-4 flex flex-col min-h-[240px]">
-        {/* Description */}
         <div className="relative mb-4 flex-shrink-0">
           <motion.div
             ref={descriptionRef}
@@ -154,14 +150,12 @@ export default function ProjectCard({
           )}
         </div>
 
-        {/* Skills Container */}
         <div className="flex-grow">
           <div className="transform translate-y-0 group-hover:-translate-y-1 transition-transform duration-300">
             <SkillCard category="Skills" skills={skills} index={index} />
           </div>
         </div>
 
-        {/* Links */}
         <div className="mt-4 flex-shrink-0">{renderLink()}</div>
       </div>
     </motion.div>
