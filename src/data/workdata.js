@@ -1,6 +1,22 @@
-import { details } from "framer-motion/client";
-
 export const getWorkExperience = (t) => [
+  {
+    position: t("workexperience.fcs.position"),
+    company: "FCS Consultores",
+    period: t("workexperience.fcs.period"),
+    description: [
+      t("workexperience.fcs.description_1"),
+      t("workexperience.fcs.description_2"),
+      t("workexperience.fcs.description_3"),
+      t("workexperience.fcs.description_4"),
+    ],
+    skills: [
+      { name: "React", iconName: "react" },
+      { name: "Tailwind CSS", iconName: "tailwind" },
+      { name: ".NET Core", iconName: "dotnet" },
+      { name: "Firebase", iconName: "firebase" },
+      { name: "Node JS", iconName: "nodejs" },
+    ],
+  },
   {
     position: t("workexperience.simetria.position"),
     company: "Simetria Digital",

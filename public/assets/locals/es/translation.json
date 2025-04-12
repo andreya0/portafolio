@@ -61,6 +61,14 @@
       "description_2": "Colaboré con un equipo de desarrolladores para <strong>optimizar la arquitectura de la aplicación</strong> y mejorar la <strong>experiencia del usuario</strong> mediante la <strong>metodología ágil</strong>.",
       "description_3": "Diseñé e implementé <strong>funcionalidades backend y frontend</strong> utilizando <strong>tecnologías modernas</strong> como <strong>.NET Core</strong>, <strong>React</strong> y <strong>MySQL</strong>, asegurando un desarrollo robusto.",
       "description_4": "Participé en <strong>reuniones de planificación</strong> y <strong>revisión de código</strong> para garantizar la <strong>calidad</strong> y <strong>coherencia</strong> del producto final."
+    },
+    "fcs": {
+      "position": "Desarrollador Full Stack",
+      "period": "Feb 2025 - Presente",
+      "description_1": "Desarrollo de <strong>aplicaciones web personalizadas</strong> integradas con <strong>SAP Business One</strong>, adaptando soluciones para satisfacer las necesidades operativas únicas de cada cliente.",
+      "description_2": "Diseño y construcción de <strong>APIs REST</strong> conectadas a la <strong>Capa de Servicio de SAP B1</strong>, utilizando <strong>consultas SQL</strong> o <strong>HANA</strong> según la infraestructura del cliente.",
+      "description_3": "Uso de <strong>Firebase</strong> y <strong>Firestore</strong> para gestionar <strong>autenticación</strong>, <strong>permisos dinámicos</strong> y <strong>actualizaciones en tiempo real</strong> mediante listeners.",
+      "description_4": "Realización de <strong>mantenimiento del sistema</strong> e implementación de <strong>mejoras de funcionalidades</strong> para alinearse con los requisitos comerciales en evolución."
     }
   },
   "personalprojects": {

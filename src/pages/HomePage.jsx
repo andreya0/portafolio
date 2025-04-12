@@ -7,13 +7,38 @@ import ButtonMainPage from "../components/Main/ButtonMainPage";
 import CV from "../../public/icons/cv";
 import { Mail } from "lucide-react";
 import i18next from "i18next";
+import { useEffect, useState, memo } from "react";
+
+const MemoizedLetterPath = memo(LetterPath);
+
 export default function MainPage() {
   const name = "Andrey Arroyo Gómez";
   const { t } = useTranslation();
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const cvPath =
     i18next.language == "es"
       ? "/files/ANDREY-ARROYO-CV-ES.pdf"
       : "/files/ANDREY-ARROYO-CV-EN.pdf";
+
+  useEffect(() => {
+    const bgImg = new Image();
+    bgImg.src = "/img/background-img.jpg?height=1080&width=1920";
+
+    const profileImg = new Image();
+    profileImg.src = "/img/profile.jpeg?w=200&fm=webp";
+
+    Promise.all([
+      new Promise((resolve) => {
+        bgImg.onload = resolve;
+      }),
+      new Promise((resolve) => {
+        profileImg.onload = resolve;
+      }),
+    ]).then(() => {
+      setIsLoaded(true);
+    });
+  }, []);
 
   return (
     <AnimatePresence>
@@ -28,6 +53,7 @@ export default function MainPage() {
                       url('/img/background-img.jpg?height=1080&width=1920')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            willChange: "opacity, filter",
           }}
         />
 
@@ -37,7 +63,7 @@ export default function MainPage() {
               {/* Linea arriba */}
               <motion.div
                 className="absolute w-full h-1 bg-white"
-                style={{ top: "50%" }}
+                style={{ top: "50%", willChange: "transform" }}
                 initial={{ top: "50%" }}
                 animate={{ top: "0%" }}
                 transition={{ duration: 0.4, delay: 0.2 }}
@@ -45,7 +71,7 @@ export default function MainPage() {
               {/* Linea abajo */}
               <motion.div
                 className="absolute w-full h-1 bg-white"
-                style={{ bottom: "50%" }}
+                style={{ bottom: "50%", willChange: "transform" }}
                 initial={{ bottom: "50%" }}
                 animate={{ bottom: "0%" }}
                 transition={{ duration: 0.4, delay: 0.2 }}
@@ -57,6 +83,7 @@ export default function MainPage() {
                   top: "0",
                   height: "5%",
                   transformOrigin: "top",
+                  willChange: "transform, opacity",
                 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 2.5, opacity: 1 }}
@@ -69,6 +96,7 @@ export default function MainPage() {
                   top: "0",
                   height: "5%",
                   transformOrigin: "top",
+                  willChange: "transform, opacity",
                 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 2.5, opacity: 1 }}
@@ -81,6 +109,7 @@ export default function MainPage() {
                   bottom: "0",
                   height: "5%",
                   transformOrigin: "bottom",
+                  willChange: "transform, opacity",
                 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 2.5, opacity: 1 }}
@@ -93,6 +122,7 @@ export default function MainPage() {
                   bottom: "0",
                   height: "5%",
                   transformOrigin: "bottom",
+                  willChange: "transform, opacity",
                 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 2.5, opacity: 1 }}
@@ -106,6 +136,7 @@ export default function MainPage() {
                   top: "-1%",
                   height: "2%",
                   transformOrigin: "bottom",
+                  willChange: "transform, opacity",
                 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 2.5, opacity: 1 }}
@@ -119,6 +150,7 @@ export default function MainPage() {
                   bottom: "-1%",
                   height: "2%",
                   transformOrigin: "top",
+                  willChange: "transform, opacity",
                 }}
                 initial={{ scaleY: 0, opacity: 0 }}
                 animate={{ scaleY: 2.5, opacity: 1 }}
@@ -131,14 +163,15 @@ export default function MainPage() {
                 initial={{ y: -45 }}
                 animate={{ y: "-120%" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
+                style={{ willChange: "transform" }}
               >
                 <motion.img
                   srcSet="/img/profile.jpeg?w=200&fm=webp 200w, /img/profile.jpeg?w=400&fm=webp 400w, /img/profile.jpeg?w=800&fm=webp 800w"
                   sizes="(max-width: 600px) 200px, (max-width: 1200px) 400px, 800px"
                   src="/img/profile.jpeg?w=200&fm=webp"
                   alt="Andrey_Arroyo_Gomez_img"
-                  rel="preload"
-                  loading="lazy"
+                  loading="eager" // Cambiado de lazy a eager para priorizar esta imagen
+                  fetchpriority="high"
                   className="rounded-full w-full h-full mx-auto object-cover"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -146,16 +179,18 @@ export default function MainPage() {
                     delay: 0.8,
                     duration: 0.5,
                   }}
+                  style={{ willChange: "opacity" }}
                 />
               </motion.div>
+
               {/* Nombre y titulo */}
               <motion.div
                 className="flex flex-col items-center z-10 m-9 rounded"
                 transition={{ duration: 0.6, delay: 1.5 }}
               >
-                <div className="flex flex-wrap justify-center max-w-full ">
+                <div className="flex flex-wrap justify-center max-w-full">
                   {name.split(" ").map((word, wordIndex) => (
-                    <div key={`word-${wordIndex}`} className="flex mx-3 ">
+                    <div key={`word-${wordIndex}`} className="flex mx-3">
                       {word.split("").map((char, charIndex) => (
                         <svg
                           key={`char-${wordIndex}-${charIndex}`}
@@ -163,11 +198,11 @@ export default function MainPage() {
                           height="40"
                           viewBox="0 0 20 25"
                           preserveAspectRatio="xMidYMid meet"
-                          className="w-8 h-8 sm:w-7 sm:h-10 md:w-7 md:h-12 lg:w-8 xl:w-10 lg:h-16 mx-0.5 my-1 sm:mx-0 sm:my-1 "
+                          className="w-8 h-8 sm:w-7 sm:h-10 md:w-7 md:h-12 lg:w-8 xl:w-10 lg:h-16 mx-0.5 my-1 sm:mx-0 sm:my-1"
                         >
-                          <LetterPath
+                          <MemoizedLetterPath
                             char={char.toUpperCase()}
-                            delay={charIndex * 0}
+                            delay={charIndex * 0.1 + wordIndex * 0.5} // Añadir retraso escalonado
                           />
                         </svg>
                       ))}
@@ -181,32 +216,37 @@ export default function MainPage() {
                   transition={{
                     duration: 0.6,
                     delay: 0.8,
-                    type: "spring",
-                    stiffness: 100,
+                    type: "tween", // Cambiado de spring a tween
+                    ease: "easeOut",
                   }}
+                  style={{ willChange: "opacity, transform" }}
                 >
                   {t("position")}
                 </motion.p>
               </motion.div>
             </div>
+
             {/* Botones */}
             <motion.div
               className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-7"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, y: 25 }}
               transition={{ delay: 0.8, duration: 0.5 }}
+              style={{ willChange: "opacity, transform" }}
             >
               <ButtonMainPage text={t("about")} to="/about" />
               <ButtonMainPage text={t("work")} to="/work" />
               <ButtonMainPage text={t("contact")} to="/contact" />
             </motion.div>
           </div>
+
           {/* Socials */}
           <motion.div
             className="flex justify-center space-x-4 z-10"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
+            style={{ willChange: "opacity, transform" }}
           >
             <button
               className="p-2 bg-white bg-opacity-60 rounded-full hover:bg-opacity-100 transition-colors duration-200"

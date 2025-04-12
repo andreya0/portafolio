@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 
+// Rutas de letras predefinidas
 const letterPaths = {
   A: "M5 20L10 5L15 20M7 14H13",
   N: "M5 20V5L15 20V5",
@@ -15,15 +16,24 @@ const letterPaths = {
   " ": "",
 };
 
-const LetterPath = ({ char }) => {
+const LetterPath = ({ char, delay = 0 }) => {
+  // Variantes de la animación con tweens en lugar de springs para mejor rendimiento
   const pathVariants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay: 0.6, type: "spring", duration: 3, bounce: 0 },
-        opacity: { delay: 0.6, duration: 0.1 },
+        pathLength: {
+          delay: 0.6 + delay * 0.05,
+          type: "tween",
+          duration: 1.5,
+          ease: "easeInOut",
+        },
+        opacity: {
+          delay: 0.6 + delay * 0.05,
+          duration: 0.1,
+        },
       },
     },
   };
@@ -39,6 +49,8 @@ const LetterPath = ({ char }) => {
       variants={pathVariants}
       initial="hidden"
       animate="visible"
+      strokeDasharray="0 1"
+      style={{ willChange: "opacity, stroke-dashoffset" }}
     />
   );
 };
